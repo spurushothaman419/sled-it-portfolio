@@ -3,7 +3,7 @@ name: 🚀 Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Adjust if your default branch is different
+      - main
 
 permissions:
   contents: read
@@ -13,8 +13,9 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: 📥 Checkout source code
+      - name: 📥 Checkout repository
         uses: actions/checkout@v4
 
       - name: 🧱 Setup Node.js

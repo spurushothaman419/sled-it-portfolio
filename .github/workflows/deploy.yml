@@ -24,10 +24,10 @@ jobs:
           node-version: '18'
 
       - name: 📦 Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: 🔧 Build project
-        run: npm run build
+      - name: 🔧 Build with Vite
+        run: npx vite build
 
       - name: 📤 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
